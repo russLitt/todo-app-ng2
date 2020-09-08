@@ -15,18 +15,27 @@ import { Component } from '@angular/core';
 //     } 
 //   }
 
-  export class AppComponent {
-    todoArray=[];
-    todo;
-    //todoForm: new FormGroup()
-  
-  
-     addTodo(value){
-      if(value!==""){
-       this.todoArray.push(value)
-      //console.log(this.todos) 
-    }else{
-      alert('Field required **')
+export class AppComponent {
+  todoArray = [];
+  todo;
+
+  addTodo(value) {
+    if (value !== "") {
+      this.todoArray.push(value)
+      console.log(this.todoArray)
+    } else {
+      alert('Enter a todo task')
+    }
+  }
+
+  /*delete item*/
+  deleteItem(todo) {
+    console.log("delete item")
+
+    for (let i = 0; i <= this.todoArray.length; i++) {
+      if (todo == this.todoArray[i]) {
+        this.todoArray.splice(i, 1)
+      }
     }
   }
 }
