@@ -5,6 +5,28 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'todo-app-ng2';
+
+// export class AppComponent { 
+//   todoArray=[]
+
+//   addTodo(value) {    
+//     this.todoArray.push(value)
+//     console.log(this.todoArray) 
+//     } 
+//   }
+
+  export class AppComponent {
+    todoArray=[];
+    todo;
+    //todoForm: new FormGroup()
+  
+  
+     addTodo(value){
+      if(value!==""){
+       this.todoArray.push(value)
+      //console.log(this.todos) 
+    }else{
+      alert('Field required **')
+    }
+  }
 }
