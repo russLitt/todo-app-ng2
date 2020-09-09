@@ -6,18 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 
-// export class AppComponent { 
-//   todoArray=[]
-
-//   addTodo(value) {    
-//     this.todoArray.push(value)
-//     console.log(this.todoArray) 
-//     } 
-//   }
-
 export class AppComponent {
   todoArray = [];
   todo;
+  //todoForm;
 
   addTodo(value) {
     if (value !== "") {
@@ -28,7 +20,7 @@ export class AppComponent {
     }
   }
 
-  /*delete item*/
+  // delete item
   deleteItem(todo) {
     console.log("delete item")
 
@@ -36,6 +28,16 @@ export class AppComponent {
       if (todo == this.todoArray[i]) {
         this.todoArray.splice(i, 1)
       }
+    }
+  }
+
+  // submit Form
+  todoSubmit(value: any) {
+    if (value !== "") {
+      this.todoArray.push(value.todo)
+      //this.todoForm.reset();
+    } else {
+      alert('A todo item must be entered')
     }
   }
 }
