@@ -36,8 +36,16 @@ export class AppComponent {
     if (value !== "") {
       this.todoArray.push(value.todo)
       //this.todoForm.reset();
-    } else {
+    } else if (value == "") {
       alert('A todo item must be entered')
     }
   }
+
+  validateForm() {
+    var x = document.forms["todoForm"]["todo"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+  } 
 }
