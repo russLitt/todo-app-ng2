@@ -9,6 +9,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   todoArray = [];
   todo;
+  completedArray = [];
+  completed;
   //todoForm;
 
   addTodo(value) {
@@ -48,4 +50,8 @@ export class AppComponent {
       return false;
     }
   } 
+
+  addToCompleted(completed) {
+    this.completedArray.push(completed)
+  }
 }

@@ -5,7 +5,7 @@
       <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a>
+      <a class="nav-link" data-toggle="tab" href="#menu1">Completed</a>
     </li>
   </ul>
 
@@ -25,12 +25,24 @@
         </div>
         <div class="data">
           <ul class="list-unstyled">
-            <li *ngFor="let todo of todoArray">{{ todo }}<i (click)="deleteItem(todo)" class="material-icons">delete</i>
+            <li *ngFor="let todo of todoArray">{{ todo }}<i (click)="deleteItem(todo)" (click)="moveToCompleted(completed)"
+              class="material-icons">delete</i>
               <i class="material-icons">check</i></li>
           </ul>
         </div>
         <div>{{ todoArray.length }} item(s) left</div>
       </form>
     </div>
+    <div id="menu1" class="container tab-pane">
+      <h1 class="text-center text-primary">Completed Tasks</h1>
+      <div class="data">
+        <ul class="list-unstyled">
+          <li *ngFor="let completed of completedArray">{{ completed }}<i class="material-icons">delete</i>
+           </li>
+        </ul>
+      </div>
+    </div>
   </div>
+
+
 </div>
