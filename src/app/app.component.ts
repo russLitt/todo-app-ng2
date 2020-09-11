@@ -51,10 +51,19 @@ export class AppComponent {
     }
   } 
 
+  //add item to completed list
   addToCompleted(value) {
     this.completedArray.push(value)
     console.log(this.completedArray)
     console.log("completed")
     this.deleteItem(value)
+  }
+
+  removeCompleted(completed) {
+    for (let i = 0; i <= this.completedArray.length; i++) {
+      if (completed == this.completedArray[i]) {
+        this.completedArray.splice(i, 1)
+      }
+    }
   }
 }
