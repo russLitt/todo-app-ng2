@@ -51,7 +51,10 @@ export class AppComponent {
     }
   } 
 
-  addToCompleted(completed) {
-    this.completedArray.push(completed)
+  addToCompleted(value) {
+    this.completedArray.push(value)
+    console.log(this.completedArray)
+    console.log("completed")
+    this.deleteItem(value)
   }
 }
