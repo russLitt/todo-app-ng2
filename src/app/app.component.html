@@ -1,14 +1,13 @@
 <div class="container mt-3">
   <!-- Nav tabs -->
-  <ul class="nav nav-tabs" style="max-width: 30em; margin: 4em auto;">
+  <ul class="nav nav-tabs">
     <li class="nav-item">
       <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#menu1">Completed</a>
+      <a class="nav-link" data-toggle="tab" href="#completed-list">Completed</a>
     </li>
   </ul>
-
 
   <!-- Tab panes -->
   <div class="tab-content">
@@ -32,11 +31,11 @@
         <div>{{ todoArray.length }} item(s) left</div>
       </form>
     </div>
-    <div id="menu1" class="container tab-pane">
+    <div id="completed-list" class="container tab-pane">
       <h1 class="text-center text-primary">Completed Tasks</h1>
       <div class="data">
         <ul class="list-unstyled">
-          <li *ngFor="let completed of completedArray">{{ completed }}<i (click)="removeCompleted(completed)" class="material-icons">delete</i></li>
+          <li *ngFor="let completed of completedArray"><del>{{ completed }}</del><i (click)="removeCompleted(completed)" class="material-icons">delete</i></li>
         </ul>
       </div>
     </div>

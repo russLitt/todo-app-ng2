@@ -8,8 +8,7 @@ body {
 
 form { 
     max-width: 30em; 
-    margin: -4em auto; 
-    /* margin-top: -4em; */
+    margin: -4em auto;
     position: relative; 
     background: #f4f4f4; 
     padding: 2em 3em;
@@ -22,7 +21,8 @@ form h1 {
 
 form input[type=text]::placeholder {   
     font-family: "Raleway";   
-    color:#666; }
+    color:#666; 
+}
     
 form .data {    
     margin-top: 1em;
@@ -32,12 +32,15 @@ form .data li {
     background: #fff; 
     border-left: 4px solid #006cf9; 
     padding: 1em; margin: 1em auto; 
-    color: #666; font-family: "Raleway";
+    color: #666; 
+    font-family: "Raleway";
 }
+
 form .data li i {    
     float: right;    
     color: #888;    
-    cursor: pointer;}
+    cursor: pointer;
+}
     
 form .input-group-text {    
     background: #006cf9;    
@@ -65,31 +68,49 @@ form .form-control:focus {
     box-shadow: 0;
 }
 
-#menu1 {
+.nav-tabs {
+    max-width: 30em;
+    margin: 4em auto;
+}
+
+.nav-link {
+    background-color: #dfdbdb;
+}
+
+.nav-link.active {
+    background-color: #f4f4f4;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+}
+
+#completed-list {
     max-width: 30em; 
     margin: -4em auto; 
-    /* margin-top: -4em; */
     position: relative; 
     background: #f4f4f4; 
     padding: 2em 3em;
 }
 
-#menu1 h1 {
+#completed-list h1 {
     font-family: "Raleway";    
     color:#006cf9;
 }
 
-#menu1 .data {    
+#completed-list .data {    
     margin-top: 1em;
 }
 
-#menu1 .data li { 
+#completed-list .data li { 
     background: #fff; 
     border-left: 4px solid #006cf9; 
     padding: 1em; margin: 1em auto; 
     color: #666; font-family: "Raleway";
 }
-#menu1 .data li i {    
+
+#completed-list .data li i {    
     float: right;    
     color: #888;    
-    cursor: pointer;}
+    cursor: pointer;
+}
