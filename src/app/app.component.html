@@ -35,9 +35,11 @@
       <h1 class="text-center text-primary">Completed Tasks</h1>
       <div class="data">
         <ul class="list-unstyled">
-          <li *ngFor="let completed of completedArray"><del>{{ completed }}</del><i (click)="removeCompleted(completed)" class="material-icons">delete</i></li>
+          <li *ngFor="let completed of completedArray"><del>{{ completed }}</del><i (click)="removeCompleted(completed)"
+              class="material-icons" matTooltip="Info about the action">delete</i></li>
         </ul>
       </div>
+      <!-- <button class="btn-primary">Remove All</button> -->
     </div>
   </div>
 </div>
