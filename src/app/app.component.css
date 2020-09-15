@@ -68,6 +68,14 @@ form .form-control:focus {
     box-shadow: 0;
 }
 
+#check-mark {
+    margin-right: 10px;
+}
+
+#check-mark:hover {
+    color: green;
+}
+
 .nav-tabs {
     max-width: 30em;
     margin: 4em auto;
