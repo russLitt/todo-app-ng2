@@ -41,7 +41,7 @@ form .data li i {
     color: #888;    
     cursor: pointer;
 }
-    
+
 form .input-group-text {    
     background: #006cf9;    
     border-radius: 50%;    
@@ -68,12 +68,20 @@ form .form-control:focus {
     box-shadow: 0;
 }
 
+#add-task-icon:hover {
+    color: darkblue;
+}
+
 #check-mark {
     margin-right: 10px;
 }
 
 #check-mark:hover {
-    color: green;
+    color: lime;
+}
+
+#delete-icon:hover {
+    color: red;
 }
 
 .nav-tabs {
@@ -121,4 +129,8 @@ form .form-control:focus {
     float: right;    
     color: #888;    
     cursor: pointer;
+}
+
+#completed-list .data li i:hover {    
+    color: red;
 }
