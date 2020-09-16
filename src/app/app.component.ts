@@ -33,12 +33,12 @@ export class AppComponent {
     }
   }
 
-  // submit Form
+  // submit Form by enter key
   todoSubmit(value: any) {
-    if (value !== "") {
+    if (value.todo !== "") {
       this.todoArray.push(value.todo)
       //this.todoForm.reset();
-    } else if (value == "") {
+    } else if (value.todo == "") {
       alert('A todo item must be entered')
     }
   }

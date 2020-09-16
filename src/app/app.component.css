@@ -55,6 +55,10 @@ form .input-group-text {
     cursor: pointer;
 } 
 
+form .input-group-text:hover {
+    background-color: #0955b8;
+}
+
 form .input-group-text i {    
     font-size: 2em;
 }
@@ -66,10 +70,6 @@ form .form-control {
 
 form .form-control:focus { 
     box-shadow: 0;
-}
-
-#add-task-icon:hover {
-    color: darkblue;
 }
 
 #check-mark {
