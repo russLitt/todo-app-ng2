@@ -11,11 +11,14 @@ export class AppComponent {
   todo;
   completedArray = [];
   completed;
-  //todoForm;
+  todoForm;
+  displayItemsLeft = false;
+  itemsLeft = 0;
 
   addTodo(value) {
     if (value !== "") {
       this.todoArray.push(value)
+      // this.todoForm.resetForm();
       console.log(this.todoArray)
     } else {
       alert('Enter a todo task')
@@ -42,14 +45,6 @@ export class AppComponent {
       alert('A todo item must be entered')
     }
   }
-
-  validateForm() {
-    var x = document.forms["todoForm"]["todo"].value;
-    if (x == "") {
-      alert("Name must be filled out");
-      return false;
-    }
-  } 
 
   //add item to completed list
   addToCompleted(value) {

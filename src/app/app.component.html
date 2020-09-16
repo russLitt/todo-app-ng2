@@ -12,13 +12,12 @@
   <!-- Tab panes -->
   <div class="tab-content">
     <div id="home" class="container tab-pane active">
-      <form #todoForm="ngForm" (submit)="todoSubmit(todoForm.value); todoForm.resetForm();"
-        onsubmit="return validateForm()" required>
+      <form #todoForm="ngForm" (submit)="todoSubmit(todoForm.value); todoForm.resetForm();">
         <div class="form-group">
           <h1 class="text-center text-primary">Todo List</h1>
           <div class="input-group-prepend">
             <input type="text" #todo class="form-control" placeholder="Add Todo" name="todo" ngModel>
-            <span class="input-group-text" (click)="addTodo(todo.value)">
+            <span class="input-group-text" (click)="addTodo(todo.value); todoForm.resetForm();">
               <i class="material-icons" id="add-task-icon">add</i></span>
           </div>
         </div>
@@ -30,7 +29,7 @@
                 title="Mark as Completed">check</i></li>
           </ul>
         </div>
-        <div>{{ todoArray.length }} item(s) left</div>
+        <div *ngIf="displayItemsLeft">{{ todoArray.length }} item(s) left</div>
       </form>
     </div>
     <div id="completed-list" class="container tab-pane">
