@@ -29,7 +29,8 @@
                 title="Mark as Completed">check</i></li>
           </ul>
         </div>
-        <div *ngIf="displayItemsLeft">{{ todoArray.length }} item(s) left</div>
+        <div *ngIf="todoArray.length == 1">{{ todoArray.length }} item left</div>
+        <div *ngIf="todoArray.length > 1">{{ todoArray.length }} items left</div>
       </form>
     </div>
     <div id="completed-list" class="container tab-pane">
