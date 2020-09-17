@@ -61,4 +61,8 @@ export class AppComponent {
       }
     }
   }
+
+  removeAllCompleted() {
+    this.completedArray.length = 0;
+  }
 }

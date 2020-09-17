@@ -41,7 +41,9 @@
               class="material-icons" data-toggle="tooltip" title="Delete Item">delete</i></li>
         </ul>
       </div>
-      <!-- <button class="btn-primary">Remove All</button> -->
+      <div *ngIf="completedArray.length >= 1">
+        <button class="btn-primary" (click)="removeAllCompleted(completedArray)">Clear All</button>
+      </div>
     </div>
   </div>
 </div>
