@@ -14,9 +14,9 @@
     <div id="home" class="container tab-pane active">
       <form #todoForm="ngForm" (submit)="todoSubmit(todoForm.value); todoForm.resetForm();">
         <div class="form-group">
-          <h1 class="text-center text-primary">Todo List</h1>
+          <h1 class="text-center text-primary">To-do List</h1>
           <div class="input-group-prepend">
-            <input type="text" #todo class="form-control" placeholder="Add Todo" name="todo" ngModel>
+            <input type="text" #todo class="form-control" placeholder="Add To-do item" name="todo" ngModel>
             <span class="input-group-text" (click)="addTodo(todo.value); todoForm.resetForm();">
               <i class="material-icons" id="add-task-icon">add</i></span>
           </div>

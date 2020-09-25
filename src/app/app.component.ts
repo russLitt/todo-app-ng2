@@ -12,8 +12,6 @@ export class AppComponent {
   completedArray = [];
   completed;
   todoForm;
-  displayItemsLeft = false;
-  itemsLeft = 0;
 
   addTodo(value) {
     if (value !== "") {
@@ -21,7 +19,7 @@ export class AppComponent {
       // this.todoForm.resetForm();
       console.log(this.todoArray)
     } else {
-      alert('Enter a todo task')
+      alert('Enter a to-do task')
     }
   }
 
@@ -42,7 +40,7 @@ export class AppComponent {
       this.todoArray.push(value.todo)
       //this.todoForm.reset();
     } else if (value.todo == "") {
-      alert('A todo item must be entered')
+      alert('A to-do item must be entered')
     }
   }
 
