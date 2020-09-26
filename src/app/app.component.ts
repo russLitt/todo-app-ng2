@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
+  title = 'todo-app-ng2';
   todoArray = [];
   todo;
   completedArray = [];
@@ -25,8 +26,6 @@ export class AppComponent {
 
   // delete item
   deleteItem(todo) {
-    console.log("delete item")
-
     for (let i = 0; i <= this.todoArray.length; i++) {
       if (todo == this.todoArray[i]) {
         this.todoArray.splice(i, 1)
@@ -38,9 +37,9 @@ export class AppComponent {
   todoSubmit(value: any) {
     if (value !== "") {
       this.todoArray.push(value.todo)
+      console.log(value.todo)
       //this.todoForm.reset();
-    } else if (value.todo.null === true) {
-      console.log(value)
+    } else if (value.todo == null || value.todo == "") {
       alert('A to-do item must be entered')
     }
   }
